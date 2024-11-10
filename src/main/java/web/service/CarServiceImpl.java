@@ -5,6 +5,7 @@ import web.model.Car;
 
 import java.util.ArrayList;
 import java.util.List;
+
 @Component
 public class CarServiceImpl implements CarService{
     private List<Car> cars = new ArrayList<>();
@@ -16,6 +17,7 @@ public class CarServiceImpl implements CarService{
         cars.add(new Car("BMW4","Red4",4));
         cars.add(new Car("BMW5","Red5",5));
     }
+
     @Override
     public List<Car> getCars(int count) {
         if (count >= 5) {
@@ -23,5 +25,4 @@ public class CarServiceImpl implements CarService{
         }
         return cars.subList(0, Math.min(count, cars.size()));
     }
-
 }
