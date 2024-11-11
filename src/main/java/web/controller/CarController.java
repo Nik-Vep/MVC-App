@@ -12,7 +12,7 @@ import java.util.List;
 @Controller
 public class CarController {
 
-    private final CarService carService;
+    private CarService carService;
 
     @Autowired
     public CarController(CarService carService) {
